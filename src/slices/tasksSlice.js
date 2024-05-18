@@ -1,13 +1,13 @@
 /* eslint-disable no-param-reassign */
-import axios from 'axios';
+// import axios from 'axios';
 
 import { createSlice, createEntityAdapter, createAsyncThunk } from '@reduxjs/toolkit';
-import routes from '../routes';
+import { api, routes } from '../routes';
 
 export const fetchTasks = createAsyncThunk(
   'tasks/fetchTasks',
   async () => {
-    const response = await axios.get(routes.tasksPath());
+    const response = await api.get(routes.tasksPath());
     return response.data.items;
   },
 );
@@ -15,7 +15,7 @@ export const fetchTasks = createAsyncThunk(
 export const fetchCompleteTask = createAsyncThunk(
   'tasks/fetchCompleteTask',
   async (id) => {
-    const response = await axios.patch(routes.taskPath(id), { isCompleted: true });
+    const response = await api.patch(routes.taskPath(id), { isCompleted: true });
     return response.data;
   },
 );
@@ -23,7 +23,7 @@ export const fetchCompleteTask = createAsyncThunk(
 export const fetchAddTask = createAsyncThunk(
   'tasks/fetchAddTask',
   async (name) => {
-    const response = await axios.post(routes.tasksPath(), { name });
+    const response = await api.post(routes.tasksPath(), { name });
     return response.data;
   },
 );
@@ -31,7 +31,7 @@ export const fetchAddTask = createAsyncThunk(
 export const fetchRemoveTask = createAsyncThunk(
   'tasks/fetchRemoveTask',
   async (id) => {
-    const response = await axios.delete(routes.taskPath(id));
+    const response = await api.delete(routes.taskPath(id));
     return response.data;
   },
 );
@@ -50,7 +50,7 @@ const tasksSlice = createSlice({
       const index = state.ids.indexOf(action.payload.id);
       if (index !== -1) {
         state.entities[action.payload.id].isCompleted = true;
-      };
+      }
     },
   },
   extraReducers: (builder) => {

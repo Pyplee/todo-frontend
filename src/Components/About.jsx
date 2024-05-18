@@ -21,7 +21,7 @@ const About = () => {
         <Arrow />
       </div>
       <div className='links'>
-        <a href='https://github.com/Pyplee' target="_blank" className='text-black link-info'>{t('about.linkProfile')}</a>
+        <a href='https://github.com/Pyplee' target="_blank" rel="noreferrer" className='text-black link-info'>{t('about.linkProfile')}</a>
         <a href='#' className='text-black link-info'>{t('about.linkFrontend')}</a>
         <a href='#' className='text-black link-info'>{t('about.linkBackend')}</a>
         <a href='#' className='text-black link-info'>{t('about.linkDocker')}</a>

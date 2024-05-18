@@ -1,20 +1,21 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { fetchTasks, selectors as tasksSelectors } from '../slices/tasksSlice.js';
+import React from 'react';
+// import React, { useEffect } from 'react';
+// import { useSelector, useDispatch } from 'react-redux';
+// import { fetchTasks, selectors as tasksSelectors } from '../slices/tasksSlice.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import CompliteTaskSVG from '../svg_icons/mark-complite.svg';
-import ComeBackSVG from '../svg_icons/come-back.svg';
+// import CompliteTaskSVG from '../svg_icons/mark-complite.svg';
+// import ComeBackSVG from '../svg_icons/come-back.svg';
 
 const Task = () => {
   function click(e) {
     console.log("yes");
   }
 
-  const dispatch = useDispatch();
-    useEffect(() => {
-        dispatch(fetchTasks());
-    }, []);
-    const tasks = useSelector(tasksSelectors.selectAll);
+  // const dispatch = useDispatch();
+  //   useEffect(() => {
+  //       dispatch(fetchTasks());
+  //   }, []);
+  //   const tasks = useSelector(tasksSelectors.selectAll);
 
   return(
   <>
