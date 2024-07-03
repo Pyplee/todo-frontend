@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# Todo app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Screenshot_20240703_215158](https://github.com/Pyplee/todo-frontend/assets/113016827/d5143a19-68d2-442f-9281-531992560917)
 
-## Available Scripts
 
-In the project directory, you can run:
+## Обзор
+Todo app - это демонстрационный проект, созданный на React. Веб-сайт работает в связке с [backend](https://github.com/Pyplee/todo-backend). В этом веб-приложении есть возможность создавать карточки и задачи внутри. Есть возможность удаления как карточек, так и задач, также есть отдельная кнопка для удаления выполненных задач. Существует возможность кастомизации фона приложения и смена языка.
 
-### `npm start`
+## Возможности
+- **Работа с карточками и заданиями** Создание отдельных подблоков (карточек) и создание задачи внутри.
+- **Многофункциональная панель** Помимо создания элементов, есть настройка, справка и удаление всех выполненных задач.
+- **Кастомизация** Пользователи могут выбрать фон, а также сменить язык.
+- **Удобное взаимодествие с элементами** По клику на задачу, можно просмотреть описание и полное название задачи, а также удалить ее.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Установка
+**Для запуска проекта нужно запустить backend, для упрощения развертывания есть репозиторий с [docker контейнером](https://github.com/Pyplee/todo-docker-pw)**
+Чтобы настроить проект локально, выполните следующие шаги:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Клонируйте репозиторий:
+    ```
+    git clone 
+    ```
 
-### `npm test`
+2. Перейдите в каталог проекта:
+    ```
+    cd todo-frontend
+    ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Установите зависимости:
+    ```
+    make install
+    ```
 
-### `npm run build`
+4. Запустите приложение локально:
+    ```
+    make dev
+    ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+5. Откройте браузер и перейдите по адресу:
+    ```
+    http://localhost:3000
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Вид веб-приложения
+![Screenshot_20240703_215332](https://github.com/Pyplee/todo-frontend/assets/113016827/20299b2e-d2c9-4ec8-a715-63ed34d3d615)
+![Screenshot_20240703_215425](https://github.com/Pyplee/todo-frontend/assets/113016827/edb2bb4a-5e88-41d5-a8a3-a1312504d10f)
+![Screenshot_20240703_215354](https://github.com/Pyplee/todo-frontend/assets/113016827/9e01a632-9e91-425c-b0fa-dcedaf47160a)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Используемые технологии
+- **Frontend:** React, HTML, CSS, Bootstrap
+- **[Backend](https://github.com/Pyplee/todo-backend):** Express (другой репозиторий)
